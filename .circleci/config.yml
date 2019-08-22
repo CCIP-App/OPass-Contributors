@@ -1,0 +1,43 @@
+version: 2
+jobs:
+  deploy:
+
+    docker:
+       - image: circleci/node:10
+
+    steps:      
+      - checkout
+
+      - restore_cache:
+          keys:
+          - nm-{{ checksum "package-lock.json" }}
+          - nm-cache
+
+      - run:
+          name: Install deps
+          command: npm install
+
+      - run:
+          name: Build Website
+          command: npm run build
+
+      - save_cache:
+          paths:
+            - ./node_modules
+          key: nm-{{ checksum "package-lock.json" }}
+        
+      - deploy:
+          name: Deploy Release to GitHub
+          command: |
+            if [ $CIRCLE_BRANCH == 'master' ]; then
+              bash .circleci/deploy.sh
+            fi
+workflows:
+  version: 2
+  build:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only:
+                - master
