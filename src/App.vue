@@ -52,7 +52,7 @@ export default {
           login: "MukaWang",
           name: "Muka Wang",
           avatar_url:
-            "https://cdn5.telesco.pe/file/e2BZWvrTL7O94aCJXvUH7h7YjigZJOTR8eH7-wqXIYlBLif4Xuzy13IqOiFjq8uelWJMXl2y5YfJwbNe_nTpHsJFVZcl6L7YM1-qVq1tYsqczCSxVw1Gb35jRaKZFNWtlF2GyzO-sRNgy0pocY9Zg5-XByq_IAxOvd0Yc9W-EkeV3ScCdYDAxNcC0kBjBJE4O6sJcrrGo_o2zxNBO7zbnUOR5nSqD19Ywi0Oar8oYNXh_3klBkFrIItvFVBhMnaTV893851sQWrAiIqlJPKoZNcsH7Wi1shDVsf6oEvGetR3RL0d64APjPkllGNYrqv4ppBGtAbFAdpBTATIRhVQLA.jpg"
+            "https://avatars3.githubusercontent.com/u/1984779?s=460&v=4"
         }
       },
       repos: [
