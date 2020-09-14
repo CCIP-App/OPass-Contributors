@@ -5,7 +5,7 @@ jobs:
     docker:
        - image: circleci/node:10
 
-    steps:      
+    steps:
       - checkout
 
       - restore_cache:
@@ -25,7 +25,7 @@ jobs:
           paths:
             - ./node_modules
           key: nm-{{ checksum "package-lock.json" }}
-        
+
       - deploy:
           name: Deploy Release to GitHub
           command: |
